@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>その他 | 詐欺サイトコレクション</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="bg-gradation"></div>
+  <header class="site-header">
+    <h1>詐欺サイトコレクション</h1>
+    <nav class="global-menu">
+      <ul>
+        <li><a href="index.html">副業サイト</a></li>
+        <li><a href="gift.html">無料ギフト系</a></li>
+        <li><a href="other.html" class="active">その他</a></li>
+      </ul>
+    </nav>
+  </header>
+  <button id="add-btn" title="サイトを追加">＋</button>
+  <div id="add-form" style="display:none;">
+    <input type="text" id="site-title" placeholder="サイトのタイトル">
+    <input type="text" id="site-url" placeholder="サイトのURL">
+    <input type="file" id="site-image" accept="image/*">
+    <button id="submit-btn">追加</button>
+    <button id="cancel-btn">キャンセル</button>
+    <span id="loading" style="display:none; color:#d77;">画像生成中...</span>
+  </div>
+  <main>
+    <section class="cards-container" id="cards-container"></section>
+  </main>
+  <button id="clear-btn" style="position:fixed;bottom:20px;right:20px;z-index:100;">全カード削除</button>
+  <script>
+    window.CARD_KEY = 'scamCards_other';
+  </script>
+  <script src="main.js"></script>
+</body>
+</html>
