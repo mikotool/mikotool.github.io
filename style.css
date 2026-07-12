@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+    background-color: #222;
+}
+
+#game-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+#board {
+    flex-grow: 1;
+    position: relative;
+    background-color: #f5f5f5;
+    overflow: hidden;
+}
+
+#sidebar {
+    width: 200px;
+    background-color: #dcdcdc;
+    border-left: 2px solid #aaa;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+    gap: 15px;
+}
+
+/* 素材の基本スタイル */
+.element-base {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    touch-action: none; /* スマホでのスクロール誤動作防止 */
+}
+
+/* 画像挿入用のスタイル */
+.element-base img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    pointer-events: none; /* ドラッグ時の画像ゴースト防止 */
+}
+
+.element-base span {
+    font-size: 12px;
+    margin-top: 4px;
+    font-weight: bold;
+    pointer-events: none;
+    color: #333;
+}
+
+/* 右側リスト内の素材 */
+.sidebar-element {
+    transition: transform 0.1s;
+}
+
+.sidebar-element:hover {
+    transform: scale(1.05);
+}
+
+/* 合成ボード上の素材 */
+.board-element {
+    position: absolute;
+    cursor: grab;
+    transform: translate(-50%, -50%); /* 中央を基準にする */
+}
+
+.board-element:active {
+    cursor: grabbing;
+}
