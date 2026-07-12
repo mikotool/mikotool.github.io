@@ -1,15 +1,13 @@
 // ====== 1. 素材とレシピのデータ設定 ======
 
-// 画像をご自身で用意する場合は、imageプロパティのパスを変更してください。
 const elementsData = {
-    'air': { name: 'Air', image: 'images/air.png' },
-    'earth': { name: 'Earth', image: 'images/earth.png' },
-    'fire': { name: 'Fire', image: 'images/Fire.png' },
-    'water': { name: 'Water', image: 'images/Water.png' },
+    'air': { name: 'Air', image: './images/air.png' },
+    'earth': { name: 'Earth', image: './images/earth.png' },
+    'fire': { name: 'Fire', image: './images/Fire.png' },
+    'water': { name: 'Water', image: './images/Water.png' },
     
-    // 以下はテスト用に追加した合成後の素材です
-    'energy': { name: 'Energy', image: 'images/energy.png' },
-    'mud': { name: 'Mud', image: 'images/mud.png' }
+    'energy': { name: 'Energy', image: './images/energy.png' },
+    'mud': { name: 'Mud', image: './images/mud.png' }
 };
 
 // 合成レシピ（id同士をカンマ区切りで指定、順不同で機能します）
