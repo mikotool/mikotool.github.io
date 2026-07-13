@@ -8,7 +8,7 @@ const elementsData = {
     
     'energy': { name: 'Energy', image: './images/energy.png' },
     'mud': { name: 'Mud', image: './images/mud.png' },
-    'lava': { name: 'lava', images: '.images/lava.png' }
+    'lava': { name: 'lava', image: '.images/lava.png' }
 };
 
 // 合成レシピ（id同士をカンマ区切りで指定、順不同で機能します）
